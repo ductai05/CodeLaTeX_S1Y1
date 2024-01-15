@@ -1,0 +1,397 @@
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND THEMES
+%----------------------------------------------------------------------------------------
+
+\documentclass{beamer}
+
+\mode<presentation> {
+
+% The Beamer class comes with a number of default slide themes
+% which change the colors and layouts of slides. Below this is a list
+% of all the themes, uncomment each in turn to see what they look like.
+
+%\usetheme{default}
+%\usetheme{AnnArbor}
+%\usetheme{Antibes}
+%\usetheme{Bergen}
+%\usetheme{Berkeley}
+%\usetheme{Berlin}
+%\usetheme{Boadilla}
+%\usetheme{CambridgeUS}
+%\usetheme{Copenhagen}
+%\usetheme{Darmstadt}
+%\usetheme{Dresden}
+%\usetheme{Frankfurt}
+%\usetheme{Goettingen}
+%\usetheme{Hannover}
+%\usetheme{Ilmenau}
+%\usetheme{JuanLesPins}
+%\usetheme{Luebeck}
+\usetheme{Madrid}
+%\usetheme{Malmoe}
+%\usetheme{Marburg}
+%\usetheme{Montpellier}
+%\usetheme{PaloAlto}
+%\usetheme{Pittsburgh}
+%\usetheme{Rochester}
+%\usetheme{Singapore}
+%\usetheme{Szeged}
+%\usetheme{Warsaw}
+
+% As well as themes, the Beamer class has a number of color themes
+% for any slide theme. Uncomment each of these in turn to see how it
+% changes the colors of your current slide theme.
+
+%\usecolortheme{albatross}
+%\usecolortheme{beaver}
+%\usecolortheme{beetle}
+%\usecolortheme{crane}
+%\usecolortheme{dolphin}
+%\usecolortheme{dove}
+%\usecolortheme{fly}
+%\usecolortheme{lily}
+%\usecolortheme{orchid}
+%\usecolortheme{rose}
+%\usecolortheme{seagull}
+%\usecolortheme{seahorse}
+%\usecolortheme{whale}
+%\usecolortheme{wolverine}
+
+%\setbeamertemplate{footline} % To remove the footer line in all slides uncomment this line
+%\setbeamertemplate{footline}[page number] % To replace the footer line in all slides with a simple slide count uncomment this line
+
+%\setbeamertemplate{navigation symbols}{} % To remove the navigation symbols from the bottom of all slides uncomment this line
+}
+
+\usepackage{graphicx} % Allows including images
+\usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
+\usepackage[vietnamese]{babel}
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\title[Presentation ]{Git và GitHub
+} % The short title appears at the bottom of every slide, the full title is only on the title page
+
+\author{ Đinh Đức Anh Khoa - 23122001 \\ Nguyễn Lê Hoàng Trung - 23122002 \\ Nguyễn Đình Hà Dương - 23122004 \\ Đinh Đức Tài - 23122013
+} % 
+
+\institute[23TNT1] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
+{
+FIT@HCMUS \\ % Your institution for the title page
+\medskip
+\textit{TPHCM, tháng 10 năm 2023} % 
+}
+\date{} % Date, can be changed to a custom date
+
+\begin{document}
+
+\begin{frame}
+\titlepage % Print the title page as the first slide
+\end{frame}
+
+\begin{frame}
+\frametitle{Tổng quan} % Table of contents slide, comment this block out to remove it
+\tableofcontents % Throughout your presentation, if you choose to use \section{} and \subsection{} commands, these will automatically be printed on this slide as an overview of your presentation
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+%	PRESENTATION SLIDES
+%----------------------------------------------------------------------------------------
+\section{Mở đầu:} 
+%________________Slide 1__________________
+\begin{frame}
+\frametitle{ 1. Mở đầu}
+\begin{itemize}
+\item Trong bài thuyết trình này, ta sẽ tìm hiểu về Git và GitHub, từ cách chúng hoạt động, lợi ích của việc sử dụng chúng, đến các khái niệm và công cụ cơ bản mà chúng ta cần để bắt đầu sử dụng một cách hiệu quả.
+
+\end{itemize}
+
+\begin{figure}[h]
+\centering\includegraphics[width=1\linewidth]{images/pic1.png}
+\end{figure}
+
+\end{frame}
+
+
+%_______________Silde 1.1____________________
+
+\begin{frame}
+\frametitle{ 1.1 Git là gì?}
+
+\begin{block}{ Git}
+ Git là một hệ thống quản lý phiên bản phân tán (distributed version control system) được sử dụng rộng rãi trong phát triển phần mềm. Nó cho phép các nhà phát triển làm việc cùng nhau trên cùng một dự án mà không cần phải giao tiếp trực tiếp. Mỗi nhà phát triển có thể làm việc trên một bản sao địa phương (local copy) của dự án và sau đó đồng bộ hoá các thay đổi của mình với các phiên bản chính thức. Git theo dõi lịch sử thay đổi của dự án, cho phép nhà phát triển quay lại các phiên bản trước đó, so sánh các thay đổi và giải quyết xung đột.
+
+\end{block}
+
+\end{frame}
+
+%_______________Slide 1.2_______________________
+\begin{frame}
+\frametitle{ 1.2 GitHub là gì?}
+
+
+\begin{block}{ GitHub}
+ GitHub là một dịch vụ lưu trữ mã nguồn dựa trên Git. Nó cung cấp một nền tảng trực tuyến cho các nhà phát triển lưu trữ, quản lý và chia sẻ mã nguồn dự án. GitHub cho phép người dùng tạo ra các kho (repositories) để lưu trữ các dự án, quản lý các nhánh (branches) để phát triển song song và tích hợp công cụ quản lý vấn đề (issue tracking) và hệ thống quản lý yêu cầu kéo (pull request) để tương tác với cộng đồng phát triển. Ngoài ra, GitHub còn cung cấp tính năng xem xét mã (code review), quản lý dự án và tích hợp liên tục (continuous integration) giúp tăng cường sự hợp tác và kiểm soát chất lượng mã nguồn.
+
+\end{block}
+
+\end{frame}
+
+%------------------------------------------------
+\section{Git:} 
+
+%_________________Slide 2.1 ______________________
+\begin{frame}
+\frametitle{ 2. Git và tính năng}
+
+\begin{itemize}
+\item Git là một hệ thống quản lý phiên bản phân tán mạnh mẽ, có nhiều tính năng hữu ích để quản lý mã nguồn dự án. Dưới đây là một số tính năng chính của Git
+
+\end{itemize}
+
+\begin{block}{ Quản lý phiên bản phân tán}
+ Git cho phép mỗi nhà phát triển làm việc trên một bản sao địa phương của dự án. Mỗi bản sao này bao gồm toàn bộ lịch sử thay đổi của dự án, cho phép người dùng làm việc offline và đồng bộ hóa sau này.
+\end{block}
+
+\begin{block}{ Hệ thống nhánh mạnh mẽ}
+ Git cho phép tạo và quản lý các nhánh (branches) riêng biệt trong dự án. Nhánh giúp người dùng phát triển đồng thời nhiều tính năng, khắc phục lỗi hoặc thử nghiệm các phiên bản mới mà không ảnh hưởng đến nhánh chính.
+\end{block}
+
+\end{frame}
+
+%------------------------------------------------
+
+%_________________Slide 2.2 ______________________
+\begin{frame}
+\frametitle{ 2. Git và tính năng}
+\begin{block}{ Ghi lại lịch sử thay đổi}
+ Git ghi lại toàn bộ lịch sử thay đổi của dự án. Mỗi lần thay đổi, Git tạo ra một "commit" mới, ghi lại thông tin về những thay đổi được thực hiện. Điều này cho phép người dùng xem lại lịch sử, xem chi tiết những thay đổi và quay lại các phiên bản trước đó.
+\end{block}
+\begin{block}{ Xử lý xung đột}
+Khi có nhiều người cùng làm việc trên cùng một dự án, xung đột trong việc thay đổi mã nguồn có thể xảy ra. Git cung cấp các công cụ để giải quyết xung đột này, cho phép người dùng so sánh và sửa chữa xung đột một cách có tổ chức.
+\end{block}
+\end{frame}
+
+%------------------------------------------------
+
+%_________________Slide 2.3 ______________________
+\begin{frame}
+\frametitle{ 2. Git và tính năng}
+
+\begin{block}{ Hợp nhất (Merge) và kéo (Pull)}
+Git cho phép người dùng hợp nhất nhánh khác vào nhánh hiện tại để tích hợp các thay đổi. Các yêu cầu kéo (pull request) cho phép người dùng đề xuất và xem xét các thay đổi trước khi hợp nhất vào nhánh chính.
+\end{block}
+
+\begin{block}{ Lưu trữ từ xa và đồng bộ hóa}
+Git cho phép lưu trữ mã nguồn dự án trên các máy chủ từ xa, như GitHub. Người dùng có thể đồng bộ hóa các thay đổi của mình với kho chứa từ xa và chia sẻ công việc với người khác.
+\end{block}
+
+\begin{block}{ Tìm kiếm và khám phá}
+Git cung cấp các công cụ tìm kiếm mạnh mẽ để tìm kiếm lịch sử thay đổi, tìm kiếm từ khóa trong mã nguồn và khám phá các dự án công cộng trên nền tảng Git.
+\end{block}
+
+\end{frame}
+
+%------------------------------------------------
+
+\section{GitHub:} 
+
+%_________________Slide 3.1 ______________________
+\begin{frame}
+\frametitle{ 3. GitHub và tính năng}
+
+\begin{itemize}
+\item GitHub là một dịch vụ lưu trữ mã nguồn dựa trên Git và cung cấp nhiều tính năng hữu ích để quản lý và chia sẻ mã nguồn dự án. Dưới đây là một số tính năng chính của GitHub:
+\end{itemize}
+\begin{block}{ Kho chứa mã nguồn (Repositories)}
+GitHub cho phép người dùng tạo ra các kho chứa để lưu trữ mã nguồn dự án. Mỗi kho chứa bao gồm các tệp tin, thư mục và lịch sử thay đổi của dự án. Người dùng có thể tạo kho chứa công khai hoặc riêng tư và quản lý quyền truy cập của thành viên khác.
+\end{block}
+
+\end{frame}
+
+%------------------------------------------------
+
+%_________________Slide 3.2 ______________________
+\begin{frame}
+\frametitle{ 3. GitHub và tính năng}
+
+\begin{block}{ Quản lý nhánh (Branches) và yêu cầu kéo (Pull Requests)}
+GitHub hỗ trợ quản lý các nhánh trong kho chứa. Người dùng có thể tạo và làm việc trên các nhánh riêng biệt để phát triển tính năng mới hoặc khắc phục lỗi. Khi muốn hợp nhất các thay đổi từ nhánh khác vào nhánh chính, người dùng có thể tạo yêu cầu kéo (pull request) để xem xét và thảo luận với các thành viên khác trước khi hợp nhất.
+\end{block}
+\begin{block}{ Xem xét mã (Code Review)}
+ GitHub cung cấp tính năng xem xét mã cho phép các thành viên của dự án xem, nhận xét và đề xuất sửa đổi cho mã nguồn. Điều này giúp cải thiện chất lượng mã, tăng cường sự hợp tác và đảm bảo tuân thủ các quy ước và quy chuẩn lập trình.
+\end{block}
+
+\end{frame}
+
+%------------------------------------------------
+
+%_________________Slide 3.3 ______________________
+\begin{frame}
+\frametitle{ 3. GitHub và tính năng}
+
+\begin{block}{ Quản lý vấn đề (Issue Tracking)}
+GitHub có hệ thống quản lý vấn đề tích hợp sẵn, cho phép người dùng tạo và theo dõi các vấn đề, báo cáo lỗi, yêu cầu tính năng và nhiệm vụ trong dự án. Người dùng có thể gắn kết vấn đề với các yêu cầu kéo hoặc nhắc nhở thành viên khác để giải quyết.
+\end{block}
+\begin{block}{ Tích hợp liên tục (Continuous Integration)}
+ GitHub tích hợp tính năng liên tục (continuous integration) để tự động kiểm tra và xây dựng dự án mỗi khi có thay đổi trong kho chứa. Điều này giúp phát hiện lỗi sớm, đảm bảo tính ổn định và chất lượng của mã nguồn.
+\end{block}
+
+\end{frame}
+
+%------------------------------------------------
+
+%_________________Slide 3.4 ______________________
+\begin{frame}
+\frametitle{ 3. GitHub và tính năng}
+
+\begin{block}{ Quản lý dự án}
+GitHub cung cấp các công cụ quản lý dự án để theo dõi tiến độ, phân công công việc và quản lý các milestones (mục tiêu) của dự án. Người dùng có thể tạo danh sách công việc, gán người thực hiện và theo dõi tiến độ từng nhiệm vụ.
+\end{block}
+\begin{block}{ Cộng đồng và chia sẻ}
+GitHub là một cộng đồng lớn với hàng triệu dự án mã nguồn mở và tư nhân. Người dùng có thể khám phá, tìm kiếm và tham gia vào các dự án, đóng góp và chia sẻ kiến thức với cộng đồng phát triển.
+\end{block}
+
+\end{frame}
+
+%------------------------------------------------
+
+
+
+
+\section{Một số thao tác cơ bản với GitHub:} 
+
+
+
+%_____________THAO TAC DEMO GITHUB_________________
+\begin{frame}
+\frametitle{ 4. Một số thao tác cơ bản với GitHub}
+
+\text{Sau đây các câu lệnh cơ bản và trường hợp sử dụng :}\\
+\begin{block}{ \$ git init}
+\begin{itemize}
+\item \$ git init: Dùng để tạo một kho chứa git mới ở local. 
+\item Dùng khi đang trong thư mục dự án chạy lệnh git init nó sẽ tạo ra một thư mục con (ẩn) tên .git, thư mục này chứa tất cả thông tin mô tả cho kho chứa dự án (Repo) mới.
+\end{itemize}
+
+\end{block}
+\begin{block}{ \$ git clone <url>}
+\begin{itemize}
+\item \$ git clone <url>: Tạo một bản sao của Git Repo về local.
+\item Dùng khi cần copy, sao chép về các repo từ server, từ dịch vụ lưu trữ git repo, hay từ máy này sang máy khác, thư mục này sang thư mục khác.
+\end{itemize}
+
+\end{block}
+\end{frame}
+
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{ 4. Một số thao tác cơ bản với GitHub}
+
+\begin{block}{ \$ git branch <branch-name>}
+\begin{itemize}
+\item \$ git branch <branch-name> : Tạo mới một branch.
+\item Được dùng để kiểm soát các phiên bản của ứng dụng trong khi vẫn tiếp tục phát triển nó.
+\end{itemize}
+\end{block}
+
+\begin{block}{ \$ git add <fileName>}
+\begin{itemize}
+\item \$ git add <fileName>: Dùng để đưa thêm tệp tin vào khu vực Staging Area. Để cập nhật hết các files ta sử dụng lệnh "\$ git add . ".
+\item Sử dụng để đánh chỉ mục (index) các nội dung mới, mới cập nhật trong thư mục làm việc, nó chuẩn bị nội dung sắp xếp cho lần commit tiếp theo 
+\end{itemize}
+
+\end{block}
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{ 4. Một số thao tác cơ bản với GitHub}
+\begin{block}{ \$ git commit}
+\begin{itemize}
+\item \$ git commit: Sau lệnh add, cần sử dụng câu lệnh commit để đẩy thông tin thay đổi lên local respository theo cú pháp "\$ git commit -m <message>".
+\item Dùng khi cần thực hiện lưu vào CSDL Git toàn bộ nội dung chứa trong index (vùng staging) và kèm theo nó là một đoạn text thông tin (log) mô tả sự thay đổi của của commit này so với commit trước
+\end{itemize}
+
+\end{block}
+\begin{block}{ \$ git push}
+\begin{itemize}
+\item \$ git push: Đẩy tất các commit và thay đổi từ local lên remote repo.
+\item Dùng khi cần đẩy các commit mới ở máy trạm (local repo) lên server (remote repo)
+\end{itemize}
+
+\end{block}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{ 4. Một số thao tác cơ bản với GitHub}
+\begin{block}{ \$ git pull}
+\begin{itemize}
+\item \$ git pull: Dùng để gộp những thay đổi mới kéo về từ máy chủ từ xa với nhánh hiện tại trên máy local
+\item Dùng khi cần được dùng để cập nhật dữ liệu mới từ kho chứa ở remote về kho chứa local
+\end{itemize}
+
+\end{block}
+\begin{block}{ \$ git checkout <branch-name>}
+\begin{itemize}
+\item \$ git checkout <branch-name>: Dùng để truy cập vào nhánh khác.
+\item Dùng khi cần được dùng để chuyển nhánh hoặc để phục hồi file trong thư mục làm việc từ một commit trước đây.
+\end{itemize}
+
+\end{block}
+\end{frame}
+
+%------------------------------------------------
+\section{Kết luận - Tham khảo:} 
+%_________________Slide 5. ______________________
+\begin{frame}
+\frametitle{Kết luận}
+\begin{itemize}
+\item Git và GitHub là công cụ quan trọng trong quản lý phiên bản và hợp tác phát triển phần mềm.  
+\item Git cho phép quản lý phiên bản linh hoạt và an toàn. GitHub cung cấp nền tảng lưu trữ và công cụ hợp tác dễ sử dụng.
+\item Qua bài thuyết trình này, chúng ta đã hiểu về định nghĩa, tính năng của Git và GitHub, cũng như một số thao tác cơ bản với GitHub. Sử dụng Git và GitHub, chúng ta có thể nâng cao hiệu suất và hiệu quả công việc trong quá trình phát triển phần mềm.
+
+
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+%_________________Slide 6. ______________________
+\begin{frame}
+\frametitle{Tham Khảo}
+
+\item Tài liệu chính thức:
+\begin{itemize}
+\item Git: \textit{https://git-scm.com/doc}
+\item GitHub: \textit{https://docs.github.com}
+\end{itemize}
+
+
+\item Sách và tài liệu khác:
+\begin{itemize}
+\item \textit{Pro Git} - Scott Chacon và Ben Straub: \textit{https://git-scm.com/book/en/v2}
+\item \textit{Version Control with Git} - Jon Loeliger và Matthew McCullough: \textit{https://www.oreilly.com/library/view/version-control-with/9781449345037}
+\item \textit{GitHub Essentials} - Achilleas Pipinellis: \textit{https://www.packtpub.com/product/github-essentials/9781783553716}
+\end{itemize}
+
+
+\end{frame}
+
+\begin{frame}
+\Huge{\centerline{The End}}
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+
+\end{document} 
